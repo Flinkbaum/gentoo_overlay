@@ -1,9 +1,9 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 2021-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-DESCRIPTION="Small daemon managing kernel hotplug events, similarly to udevd"
+DESCRIPTION="Small daemon managing kernel hotplug events, similar to udevd"
 HOMEPAGE="https://skarnet.org/software/mdevd/"
 SRC_URI="https://skarnet.org/software/${PN}/${P}.tar.gz"
 
