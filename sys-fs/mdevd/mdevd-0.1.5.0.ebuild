@@ -14,7 +14,7 @@ IUSE="static static-libs"
 
 REQUIRED_USE="static? ( static-libs )"
 
-DEPEND="~dev-libs/skalibs-2.11.0.0:=[static-libs?]"
+DEPEND="~dev-libs/skalibs-2.11.1.0:=[static-libs?]"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
