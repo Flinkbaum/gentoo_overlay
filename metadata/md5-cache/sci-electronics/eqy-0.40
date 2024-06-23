@@ -1,0 +1,11 @@
+DEFINED_PHASES=unpack
+DEPEND=~sci-electronics/yosys-0.40
+DESCRIPTION=Equivalence Checking with Yosys
+EAPI=8
+HOMEPAGE=https://github.com/YosysHQ/eqy
+KEYWORDS=~amd64
+LICENSE=ISC
+RDEPEND=~sci-electronics/yosys-0.40
+SLOT=0
+SRC_URI=https://github.com/YosysHQ/eqy/archive/refs/tags/yosys-0.40.tar.gz -> eqy-0.40.tar.gz
+_md5_=4496e4a8abde3043dc9017276ea443a4

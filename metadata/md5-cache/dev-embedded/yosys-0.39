@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare setup
+DEPEND=|| ( dev-lang/python:3.11 ) sys-devel/bison sys-devel/flex sys-apps/gawk virtual/pkgconfig dev-libs/boost sys-libs/readline:= dev-libs/libffi:= dev-vcs/git dev-lang/tcl:= media-gfx/graphviz
+DESCRIPTION=Yosys - Yosys Open SYnthesis Suite
+EAPI=7
+HOMEPAGE=https://yosyshq.net/yosys/
+INHERIT=python-any-r1
+KEYWORDS=~amd64 ~x86
+LICENSE=ISC
+RDEPEND=sys-libs/readline:= dev-libs/libffi:= dev-vcs/git dev-lang/tcl:= media-gfx/graphviz
+SLOT=0
+SRC_URI=https://github.com/YosysHQ/yosys/archive/refs/tags/yosys-0.39.tar.gz https://github.com/YosysHQ/yosys/releases/download/yosys-0.39/abc.tar.gz
+_eclasses_=eapi8-dosym	5ac4857ad078256d939c44f7c64197a9	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	python-utils-r1	a1229a86bd0db058e474a2d7d9191cca	python-any-r1	f5169813d1619761b459800587005fd2
+_md5_=497d1a9be6e2e5b4acef47bf6326d144

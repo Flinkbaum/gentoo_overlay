@@ -1,0 +1,8 @@
+DEFINED_PHASES=-
+DESCRIPTION=Language to translate the mathematical model of a problem into a linear program
+EAPI=8
+HOMEPAGE=https://zimpl.zib.de/
+KEYWORDS=~amd64
+SLOT=0
+SRC_URI=https://github.com/scipopt/zimpl/archive/10a085f7bf52abc54c9788ea9231647ff1d80bb8.tar.gz -> zimpl-3.6.0.tar.gz
+_md5_=6d1d6b083266c319d128a7066ca81ac9

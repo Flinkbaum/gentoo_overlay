@@ -1,0 +1,126 @@
+diff --git a/device/rocm/roccounters.hpp b/device/rocm/roccounters.hpp
+index ffc9fad..45ebbe6 100644
+--- a/device/rocm/roccounters.hpp
++++ b/device/rocm/roccounters.hpp
+@@ -24,7 +24,7 @@
+ #include "top.hpp"
+ #include "device/device.hpp"
+ #include "device/rocm/rocdevice.hpp"
+-#include "hsa_ven_amd_aqlprofile.h"
++#include "hsa/hsa_ven_amd_aqlprofile.h"
+ 
+ namespace roc {
+ 
+diff --git a/device/rocm/rocdevice.hpp b/device/rocm/rocdevice.hpp
+index 8c4352c..07a1618 100644
+--- a/device/rocm/rocdevice.hpp
++++ b/device/rocm/rocdevice.hpp
+@@ -40,10 +40,10 @@
+ #include "device/rocm/rocprintf.hpp"
+ #include "device/rocm/rocglinterop.hpp"
+ 
+-#include "hsa.h"
+-#include "hsa_ext_image.h"
+-#include "hsa_ext_amd.h"
+-#include "hsa_ven_amd_loader.h"
++#include "hsa/hsa.h"
++#include "hsa/hsa_ext_image.h"
++#include "hsa/hsa_ext_amd.h"
++#include "hsa/hsa_ven_amd_loader.h"
+ 
+ #include <atomic>
+ #include <iostream>
+diff --git a/device/rocm/rocglinterop.hpp b/device/rocm/rocglinterop.hpp
+index a539cc6..588d8a6 100644
+--- a/device/rocm/rocglinterop.hpp
++++ b/device/rocm/rocglinterop.hpp
+@@ -34,7 +34,7 @@ typedef __GLXcontextRec* GLXContext;
+ 
+ #include "device/rocm/mesa_glinterop.h"
+ #include "device/rocm/rocregisters.hpp"
+-#include "hsa_ext_amd.h"
++#include "hsa/hsa_ext_amd.h"
+ 
+ namespace roc {
+ 
+diff --git a/device/rocm/rockernel.cpp b/device/rocm/rockernel.cpp
+index 76ab76a..5624c87 100644
+--- a/device/rocm/rockernel.cpp
++++ b/device/rocm/rockernel.cpp
+@@ -19,7 +19,7 @@
+  THE SOFTWARE. */
+ 
+ #include "rockernel.hpp"
+-#include "amd_hsa_kernel_code.h"
++#include "hsa/amd_hsa_kernel_code.h"
+ 
+ #include <algorithm>
+ 
+diff --git a/device/rocm/rocprogram.cpp b/device/rocm/rocprogram.cpp
+index e455964..4f77026 100644
+--- a/device/rocm/rocprogram.cpp
++++ b/device/rocm/rocprogram.cpp
+@@ -25,7 +25,7 @@
+ #include "utils/options.hpp"
+ #include "rockernel.hpp"
+ 
+-#include "amd_hsa_kernel_code.h"
++#include "hsa/amd_hsa_kernel_code.h"
+ 
+ #include <string>
+ #include <vector>
+diff --git a/device/rocm/rocsignal.hpp b/device/rocm/rocsignal.hpp
+index 3e8c1e6..9cc5bef 100644
+--- a/device/rocm/rocsignal.hpp
++++ b/device/rocm/rocsignal.hpp
+@@ -22,7 +22,7 @@
+ 
+ #include "device/devsignal.hpp"
+ 
+-#include <hsa.h>
++#include <hsa/hsa.h>
+ 
+ namespace roc {
+ 
+@@ -44,4 +44,4 @@ public:
+   }
+ };
+ 
+-};
+\ No newline at end of file
++};
+diff --git a/device/rocm/rocvirtual.cpp b/device/rocm/rocvirtual.cpp
+index 570d97f..280ac92 100644
+--- a/device/rocm/rocvirtual.cpp
++++ b/device/rocm/rocvirtual.cpp
+@@ -34,8 +34,8 @@
+ #include "platform/sampler.hpp"
+ #include "utils/debug.hpp"
+ #include "os/os.hpp"
+-#include "amd_hsa_kernel_code.h"
+-#include "amd_hsa_queue.h"
++#include "hsa/amd_hsa_kernel_code.h"
++#include "hsa/amd_hsa_queue.h"
+ 
+ #include <fstream>
+ #include <limits>
+diff --git a/device/rocm/rocvirtual.hpp b/device/rocm/rocvirtual.hpp
+index 7e9c345..669dae5 100644
+--- a/device/rocm/rocvirtual.hpp
++++ b/device/rocm/rocvirtual.hpp
+@@ -24,11 +24,11 @@
+ #include "rocdefs.hpp"
+ #include "rocdevice.hpp"
+ #include "utils/util.hpp"
+-#include "hsa.h"
+-#include "hsa_ext_image.h"
+-#include "hsa_ext_amd.h"
++#include "hsa/hsa.h"
++#include "hsa/hsa_ext_image.h"
++#include "hsa/hsa_ext_amd.h"
+ #include "rocprintf.hpp"
+-#include "hsa_ven_amd_aqlprofile.h"
++#include "hsa/hsa_ven_amd_aqlprofile.h"
+ #include "rocsched.hpp"
+ 
+ namespace roc {

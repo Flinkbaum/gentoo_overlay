@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure
+DEPEND=~dev-libs/skalibs-2.9.3.0:=[static-libs?]
+DESCRIPTION=Small daemon managing kernel hotplug events, similar to udevd
+EAPI=8
+HOMEPAGE=https://skarnet.org/software/mdevd/
+IUSE=static static-libs
+KEYWORDS=~amd64 ~x86
+LICENSE=ISC
+RDEPEND=~dev-libs/skalibs-2.9.3.0:=[static-libs?]
+REQUIRED_USE=static? ( static-libs )
+SLOT=0/0.1
+SRC_URI=https://skarnet.org/software/mdevd/mdevd-0.1.2.0.tar.gz
+_md5_=2301d930ba3e3e6dba9f24966a7c976d

@@ -1,0 +1,11 @@
+DEFINED_PHASES=-
+DEPEND=~sci-electronics/yosys-0.40
+DESCRIPTION=SymiYosys
+EAPI=8
+HOMEPAGE=https://yosyshq.readthedocs.io/projects/sby/
+KEYWORDS=~amd64
+LICENSE=ISC
+RDEPEND=~sci-electronics/yosys-0.40
+SLOT=0
+SRC_URI=https://github.com/YosysHQ/sby/archive/refs/tags/yosys-0.40.tar.gz -> sby-0.40.tar.gz
+_md5_=608b88ae8e276e09098dfea27f97b13e

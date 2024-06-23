@@ -1,0 +1,14 @@
+BDEPEND=dev-lang/gnat-gpl sys-devel/gcc sys-devel/clang
+DEFINED_PHASES=compile configure install setup
+DEPEND=sys-devel/llvm:14 !!sys-devel/llvm:0
+DESCRIPTION=VHDL 2008/93/87 simulator
+EAPI=8
+HOMEPAGE=https://ghdl.github.io/ghdl/index.html
+INHERIT=llvm
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=sys-devel/llvm:14
+SLOT=0
+SRC_URI=https://github.com/ghdl/ghdl/archive/refs/tags/v3.0.0.tar.gz
+_eclasses_=llvm	4cc6f8e29d24a8011266413e74c728bb
+_md5_=b528769217249cca0060f774cf70126b
