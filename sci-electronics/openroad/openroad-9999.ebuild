@@ -17,7 +17,7 @@ KEYWORDS="~amd64"
 
 DEPEND="dev-cpp/eigen
 	app-text/pandoc-bin
-	dev-lang/swig
+	~dev-lang/swig-4.1.1
 	dev-lang/tcl
 	dev-libs/boost
 	dev-libs/libffi
@@ -46,6 +46,10 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 IUSE="test"
+
+PATCHES=(
+	"${FILESDIR}"/0001-Add_ABC_NAMESPACE_macro_definition_to_compile_flags.patch
+	)
 
 src_configure() {
 	local mycmakeargs=(

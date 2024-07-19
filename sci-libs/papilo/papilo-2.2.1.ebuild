@@ -13,7 +13,7 @@ LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="+soplex"
+IUSE="+soplex -highs"
 
 DEPEND="dev-libs/boost[bzip2,zlib]
 dev-libs/gmp
@@ -22,3 +22,10 @@ soplex? ( sci-libs/soplex )
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
+
+src_configure() {
+	local mycmakeargs=(
+		-DHIGHS=$(usex highs ON OFF)
+	)
+	cmake_src_configure
+}

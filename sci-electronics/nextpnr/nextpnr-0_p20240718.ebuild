@@ -7,21 +7,26 @@ inherit cmake
 
 DESCRIPTION="A portable FPGA place and route tool"
 HOMEPAGE="https://github.com/YosysHQ/nextpnr"
-SRC_URI="https://github.com/YosysHQ/nextpnr/archive/refs/tags/${P}.tar.gz"
+COMMIT="eb099a9244857219ee33d627540dc5e2316893ae"
+SRC_URI="https://github.com/YosysHQ/nextpnr/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND="dev-libs/boost dev-cpp/eigen sci-electronics/icestorm sci-electronics/yosys sci-electronics/icestorm"
+DEPEND="dev-libs/boost
+dev-cpp/eigen
+sci-electronics/icestorm
+sci-electronics/yosys
+sci-electronics/icestorm"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
 IUSE="ice40 ecp5 nexus generic"
 
 src_unpack() {
-	default
-	ln -s "${WORKDIR}/nextpnr-${P}" "${WORKDIR}/${P}"
+	default_src_unpack
+	mv "${WORKDIR}/nextpnr-${COMMIT}" "${WORKDIR}/${P}"
 }
 
 src_configure() {

@@ -1,0 +1,12 @@
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 6ded2814a..42156881c 100755
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -123,6 +123,7 @@ if(USE_SYSTEM_ABC)
+     set(ABC_INCLUDE_DIR "/usr/include/abc")
+   endif()
+   add_definitions(-DABC_USE_STDINT_H=1)
++  add_definitions(-DABC_NAMESPACE=abc)
+   include_directories(${ABC_INCLUDE_DIR})
+   message(STATUS "Using ABC_INCLUDE_DIR=${ABC_INCLUDE_DIR}")
+ else()
